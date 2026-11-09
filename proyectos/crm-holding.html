@@ -2,367 +2,270 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>CRM en un holding · Emilia Lodigiani</title>
-  <meta name="description" content="Caso: implementación de CRM, bot, IVR y dashboards de atención en siete empresas de un mismo holding. Discovery, de hallazgos a funcionalidades, MVP y seguimiento.">
+  <meta name="description" content="Caso: implementación de CRM, bot, IVR y dashboards de atención en siete empresas de un mismo holding.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
 
-<header class="topbar">
-  <a class="brand" href="../index.html">Ema Lodigiani</a>
-  <nav>
-    <a href="#desafio">Desafío</a>
-    <a href="#discovery">Discovery</a>
-    <a href="#funcionalidades">Funcionalidades</a>
-    <a href="#mvp">MVP</a>
-    <a href="#resultados">Resultados</a>
-  </nav>
+<header class="nav">
+  <div class="wrap">
+    <div class="nav-inner">
+      <a class="logo" href="../index.html">ema lodigiani<span>.</span></a>
+      <nav class="nav-links" aria-label="Secciones">
+        <a href="../index.html#sobre-mi" class="hide-sm">Sobre mí</a>
+        <a href="../index.html#proyectos">Proyectos</a>
+        <a href="../index.html#contacto" class="nav-cta">Contacto</a>
+      </nav>
+    </div>
+  </div>
 </header>
 
-<nav class="side-nav" aria-label="Secciones del caso">
-  <ul>
-    <li><a href="../index.html#proyectos">← Proyectos</a></li>
-    <li><a href="#contexto">Contexto</a></li>
-    <li><a href="#desafio">El desafío</a></li>
-    <li><a href="#rol">Mi rol</a></li>
-    <li><a href="#proceso">Proceso</a></li>
-    <li><a href="#discovery">Discovery</a></li>
-    <li><a href="#funcionalidades">De hallazgos a funcionalidades</a></li>
-    <li><a href="#mvp">MVP y evolutivos</a></li>
-    <li><a href="#implementacion">Implementación</a></li>
-    <li><a href="#resultados">Resultados</a></li>
-    <li><a href="#aprendizajes">Aprendizajes</a></li>
-  </ul>
-</nav>
-
 <main>
-
-  <!-- ============ PORTADA DEL CASO ============ -->
-  <section class="case-hero" id="contexto">
+  <section class="case-hero">
     <div class="wrap">
-      <a class="back" href="../index.html#proyectos">← Volver a proyectos</a>
-      <div style="margin-top:28px"><span class="tag">Proyecto#1</span></div>
+      <a class="back" href="../index.html#proyectos">← Todos los proyectos</a>
+      <div class="tags"><span class="pill pill--magenta">Proyecto #1</span><span class="pill">Service Design</span></div>
       <h1>Implementación de CRM y canales digitales en un holding</h1>
-      <p class="lead">Un mismo CRM, siete empresas, siete formas distintas de atender a sus clientes. Mi trabajo fue <strong>entender cada negocio en profundidad</strong> para que la implementación respondiera a su realidad y no a una configuración por defecto.</p>
-
-      <div class="case-facts">
-        <div><span class="kicker">Rol</span><span class="val">Service Designer Sr</span></div>
-        <div><span class="kicker">Equipo</span><span class="val">Care &amp; Comms · itti</span></div>
-        <div><span class="kicker">Período</span><span class="val">2025 – 2026</span></div>
-        <div><span class="kicker">Herramientas</span><span class="val">CRM · Bot · IVR · Dashboards</span></div>
-      </div>
-
-      <div style="margin-top:32px">
-        <span class="kicker">Empresas del programa</span>
-        <div class="companies">
-          <span>tuti</span><span>uela</span><span class="hl">muv</span><span>ueno seguros</span><span class="hl">wepa</span><span>umarket</span><span>upay</span>
-        </div>
-        <p style="font-size:.85rem;color:var(--slate);margin-top:10px">En este caso profundizo en <strong style="color:var(--magenta)">muv</strong> y <strong style="color:var(--magenta)">wepa</strong>, dos de las empresas con modelos más diferentes entre sí.</p>
+      <p class="lede">Un mismo CRM, siete empresas, siete formas distintas de atender a sus clientes. Mi trabajo fue <strong>entender cada negocio en profundidad</strong> para que la implementación respondiera a su realidad y no a una configuración por defecto.</p>
+      <div class="ficha">
+        <div><span>Rol</span><b>Service Designer Sr</b></div>
+        <div><span>Equipo</span><b>Care &amp; Comms · itti</b></div>
+        <div><span>Período</span><b>2025 – 2026</b></div>
+        <div><span>Herramientas</span><b>CRM · Bot · IVR · Dashboards</b></div>
       </div>
     </div>
   </section>
 
-  <!-- ============ EL DESAFÍO ============ -->
-  <section class="case-section dark" id="desafio">
-    <div class="wrap">
-      <span class="kicker" style="color:var(--magenta-soft)">El desafío</span>
-      <hr class="rule">
-      <p class="big-quote">El holding quería <em>optimizar la gestión interna y la atención a clientes</em> con un CRM, canales digitales y medición. Pero no existe una implementación genérica: <em>cada negocio atiende distinto.</em></p>
-      <div class="prose" style="margin-top:32px;opacity:.9">
+  <!-- 01 -->
+  <section class="chapter" style="padding-top:24px">
+    <div class="wrap chapter-grid">
+      <div class="chapter-label"><span class="num">01</span><h2>El desafío</h2></div>
+      <div class="chapter-body">
+        <div class="quote-card">
+          <p class="big-quote">El holding quería <em>optimizar la gestión interna y la atención</em> con un CRM, canales digitales y medición. Pero no existe una implementación genérica: <em>cada negocio atiende distinto.</em></p>
+        </div>
         <p>Una app de movilidad que conecta pasajeros y conductores en tiempo real no tiene nada que ver con una red de pagos que opera a través de miles de comercios. Tienen otros clientes, otros canales, otros equipos y otros indicadores de éxito.</p>
         <p>La pregunta era cómo adaptar una misma plataforma a negocios tan distintos sin perder coherencia entre ellos, y sin trasladar a cada empresa los mismos problemas que ya tenía, ahora dentro de una herramienta nueva.</p>
+        <div class="chips" aria-label="Empresas del programa">
+          <span>tuti</span><span>uela</span><span class="on">muv</span><span>ueno seguros</span><span class="on">wepa</span><span>umarket</span><span>upay</span>
+        </div>
+        <p style="font-size:.92rem;color:var(--muted)">En este caso profundizo en <strong>muv</strong> y <strong>wepa</strong>, dos de las empresas con modelos más diferentes entre sí.</p>
       </div>
     </div>
   </section>
 
-  <!-- ============ MI ROL ============ -->
-  <section class="case-section" id="rol">
-    <div class="wrap two-col">
-      <div>
-        <span class="num-label">MI ROL</span>
-        <h2 style="margin-top:.4rem">Ser el puente entre negocio y producto</h2>
-      </div>
-      <div class="prose">
-        <p>Como Service Designer, mi foco estuvo en <strong>el entendimiento de los modelos de negocio y de atención</strong> de cada empresa, para llegar de los hallazgos a funcionalidades concretas de cada herramienta.</p>
-        <p>Trabajé en conjunto con los equipos de producto de <strong>CRM, Canales, IVR y Bot</strong> para co-crear el MVP de implementación y priorizar los futuros evolutivos. Y no me quedé en el entregable: <strong>seguí de cerca la implementación</strong> y luego hice seguimiento para aprender de lo que pasaba en la realidad.</p>
-        <p>Mi responsabilidad no era “hacer el discovery”, sino que el discovery <strong>habilitara decisiones</strong>: qué construir primero, qué dejar para después y por qué.</p>
+  <!-- 02 -->
+  <section class="chapter">
+    <div class="wrap chapter-grid">
+      <div class="chapter-label"><span class="num">02</span><h2>Mi rol</h2></div>
+      <div class="chapter-body">
+        <p class="big-quote">Ser el puente entre <em>negocio y producto.</em></p>
+        <p>Mi foco estuvo en <strong>el entendimiento de los modelos de negocio y de atención</strong> de cada empresa, para llegar de los hallazgos a funcionalidades concretas de cada herramienta.</p>
+        <p>Trabajé con los equipos de producto de <strong>CRM, Canales, IVR y Bot</strong> para co-crear el MVP de implementación y priorizar los evolutivos. Y no me quedé en el entregable: <strong>seguí de cerca la implementación</strong> y luego hice seguimiento para aprender de lo que pasaba en la realidad.</p>
+        <p>Mi responsabilidad era que el discovery <strong>habilitara decisiones</strong>: qué construir primero, qué dejar para después y por qué.</p>
       </div>
     </div>
   </section>
 
-  <!-- ============ PROCESO ============ -->
-  <section class="case-section soft" id="proceso">
-    <div class="wrap">
-      <h2>El proceso, empresa por empresa</h2>
-      <hr class="rule">
-      <p class="prose" style="max-width:720px">Definimos un recorrido común para todas las empresas, de unas 12 a 16 semanas desde el kick off hasta el hypercare. Tener el mismo marco nos permitió escalar el programa y, a la vez, dar espacio a lo particular de cada negocio.</p>
-      <div class="phases">
-        <div class="phase mid"><span class="n">00</span><span class="t">Kick off</span><span class="d">Presentación interna</span></div>
-        <div class="phase lead"><span class="n">01</span><span class="t">Discovery</span><span class="d">3 – 4 semanas</span></div>
-        <div class="phase lead"><span class="n">02</span><span class="t">Ideación</span><span class="d">3 semanas · MVP</span></div>
-        <div class="phase mid"><span class="n">03</span><span class="t">Implementación</span><span class="d">3 – 6 semanas</span></div>
-        <div class="phase mid"><span class="n">04</span><span class="t">Test</span><span class="d">1 semana</span></div>
-        <div class="phase mid"><span class="n">05</span><span class="t">Training</span><span class="d">1 – 2 semanas</span></div>
-        <div class="phase"><span class="n">06</span><span class="t">Deploy</span><span class="d">1 semana</span></div>
-        <div class="phase mid"><span class="n">07</span><span class="t">Hypercare</span><span class="d">1 semana + seguimiento</span></div>
-      </div>
-      <div class="legend">
-        <span><i style="background:var(--magenta);border-color:var(--magenta)"></i>Lideraba</span>
-        <span><i style="background:var(--magenta-wash);border-color:var(--magenta-soft)"></i>Acompañaba de cerca</span>
-        <span><i style="background:#fff"></i>Seguía</span>
+  <!-- 03 -->
+  <section class="chapter">
+    <div class="wrap chapter-grid">
+      <div class="chapter-label"><span class="num">03</span><h2>El proceso, empresa por empresa</h2></div>
+      <div class="chapter-body">
+        <p>Definimos un recorrido común para todas las empresas, de 12 a 16 semanas desde el kick off hasta el hypercare. El mismo marco nos permitió escalar el programa y, a la vez, dar espacio a lo particular de cada negocio.</p>
+        <div class="phases">
+          <div class="phase mid"><span class="n">00</span><span class="t">Kick off</span><span class="d">Presentación interna</span></div>
+          <div class="phase lead"><span class="n">01</span><span class="t">Discovery</span><span class="d">3 – 4 semanas</span></div>
+          <div class="phase lead"><span class="n">02</span><span class="t">Ideación</span><span class="d">3 semanas · MVP</span></div>
+          <div class="phase mid"><span class="n">03</span><span class="t">Implementación</span><span class="d">3 – 6 semanas</span></div>
+          <div class="phase mid"><span class="n">04</span><span class="t">Test</span><span class="d">1 semana</span></div>
+          <div class="phase mid"><span class="n">05</span><span class="t">Training</span><span class="d">1 – 2 semanas</span></div>
+          <div class="phase"><span class="n">06</span><span class="t">Deploy</span><span class="d">1 semana</span></div>
+          <div class="phase mid"><span class="n">07</span><span class="t">Hypercare</span><span class="d">1 semana + seguimiento</span></div>
+        </div>
+        <div class="legend">
+          <span><i style="background:var(--magenta)"></i>Lideraba</span>
+          <span><i style="background:var(--surface-2);box-shadow:inset 0 0 0 1.5px var(--pink)"></i>Acompañaba de cerca</span>
+          <span><i style="background:var(--surface)"></i>Seguía</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ DISCOVERY ============ -->
-  <section class="case-section" id="discovery">
-    <div class="wrap">
-      <h2>Discovery: armar la foto de cada empresa</h2>
-      <hr class="rule">
-      <div class="prose">
+  <!-- 04 -->
+  <section class="chapter">
+    <div class="wrap chapter-grid">
+      <div class="chapter-label"><span class="num">04</span><h2>Discovery: armar la foto de cada empresa</h2></div>
+      <div class="chapter-body">
         <p>Cada discovery tenía tres objetivos: <strong>entender la empresa y su modelo de negocio</strong>, <strong>modelar la información</strong> que los equipos necesitaban para implementar bien, e <strong>identificar painpoints</strong> y el impacto que podía tener la implementación.</p>
         <p>Nos empapamos de cada negocio con entrevistas a los equipos, observación de la operación, análisis de métricas y relevamiento de herramientas. El resultado era una presentación a producto que contaba la empresa en cuatro capas:</p>
-      </div>
-      <div class="layers">
-        <div class="layer"><span class="n">01</span><h4>Contexto de negocio</h4><p>Qué es la empresa, sus verticales, cómo gana plata y cómo se posiciona frente a la competencia.</p></div>
-        <div class="layer"><span class="n">02</span><h4>El norte</h4><p>Los indicadores que guían sus decisiones y hacia dónde va el negocio en el próximo año.</p></div>
-        <div class="layer"><span class="n">03</span><h4>Equipos y procesos</h4><p>Quién atiende a quién, por qué canales, con qué herramientas y dónde duele. Process maps por equipo.</p></div>
-        <div class="layer"><span class="n">04</span><h4>De cara a la implementación</h4><p>Dónde tenemos que impactar, qué es must-have y qué es nice-to-have para el negocio.</p></div>
-      </div>
+        <div class="cards">
+          <div class="card"><span class="n">01</span><h4>Contexto de negocio</h4><p>Qué es la empresa, sus verticales, cómo gana plata y cómo se posiciona frente a la competencia.</p></div>
+          <div class="card"><span class="n">02</span><h4>El norte</h4><p>Los indicadores que guían sus decisiones y hacia dónde va el negocio el próximo año.</p></div>
+          <div class="card"><span class="n">03</span><h4>Equipos y procesos</h4><p>Quién atiende a quién, por qué canales, con qué herramientas y dónde duele.</p></div>
+          <div class="card"><span class="n">04</span><h4>De cara a la implementación</h4><p>Dónde tenemos que impactar y qué es must-have o nice-to-have para el negocio.</p></div>
+        </div>
 
-      <h3 style="margin-top:72px">Dos negocios, dos modelos de atención</h3>
-      <div class="compare">
-        <article class="co-card">
-          <header>
-            <div class="name">muv</div>
-            <div class="what">Plataforma de movilidad y logística (ride-hailing). Conecta en tiempo real pasajeros con conductores, sin prestar el servicio directamente.</div>
-          </header>
-          <div class="body">
-            <h4>A quién atiende</h4>
-            <div class="chips"><span>Pasajeros B2C</span><span>Empresas (Corporativo)</span><span>Clientes ubox</span><span>Conductores</span></div>
-            <h4>Cómo atiende hoy</h4>
-            <ul>
-              <li>Un único punto de entrada para todas las verticales: un <strong>árbol de decisión</strong> que clasifica las consultas y deriva casi todo a un agente.</li>
-              <li>Los conductores son <strong>usuarios compartidos</strong> entre todas las unidades de negocio.</li>
-              <li>Empresa data-driven: <strong>soporte es un indicador principal de sus OKRs</strong>.</li>
-            </ul>
-            <h4>Hallazgos clave</h4>
-            <ul>
-              <li>La lógica de asignación desbordaba a los agentes, que terminaban <strong>pasándose tickets entre ellos</strong>.</li>
-              <li>Los agentes <strong>no veían los mensajes salientes</strong> sin respuesta: los anotaban en una planilla para no perder contexto.</li>
-              <li>El segmento corporativo se atendía de manera informal, por WhatsApp personal, con <strong>tiempos de respuesta de más de 48 hs</strong>.</li>
-              <li>Las reservas y la logística se gestionaban <strong>de forma totalmente manual</strong>.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="co-card">
-          <header>
-            <div class="name">wepa</div>
-            <div class="what">Red transaccional: pagos de servicios, corresponsalía no bancaria, remesas y terminales de autogestión, a través de miles de comercios.</div>
-          </header>
-          <div class="body">
-            <h4>A quién atiende</h4>
-            <div class="chips"><span>Puntos wepa (comercios)</span><span>Aliados TED</span><span>Facturadores y procesadoras</span><span>Cliente final</span></div>
-            <h4>Cómo atiende hoy</h4>
-            <ul>
-              <li>Su cliente principal es <strong>B2B</strong>: los comercios. El cliente final llega a través de ellos.</li>
-              <li>Gran parte del trabajo es <strong>comercial</strong>: captar y dar de alta comercios, aliados y facturadores.</li>
-              <li>Operaciones centraliza reclamos que llegan por <strong>muchas herramientas y canales</strong> a la vez.</li>
-            </ul>
-            <h4>Hallazgos clave</h4>
-            <ul>
-              <li>Los procesos comerciales <strong>no estaban estandarizados</strong> ni tenían trazabilidad: dar de alta un aliado podía llevar meses entre mails y documentación física.</li>
-              <li>La información quedaba <strong>dispersa entre sistemas</strong> y dependía de muchas áreas.</li>
-              <li>El bot web no era conversacional: solo pedía nombre y mail y abría un ticket.</li>
-              <li>Muchos procesos de backoffice eran <strong>repetitivos y manuales</strong>.</li>
-            </ul>
-          </div>
-        </article>
+        <h3 style="font-size:1.6rem;margin-top:28px">Dos negocios, dos modelos de atención</h3>
+        <div class="compare">
+          <article class="co-card">
+            <header><span class="name">muv</span><p>Plataforma de movilidad y logística (ride-hailing). Conecta en tiempo real pasajeros con conductores, sin prestar el servicio directamente.</p></header>
+            <div class="body">
+              <h4>A quién atiende</h4>
+              <div class="chips"><span>Pasajeros B2C</span><span>Empresas</span><span>Clientes ubox</span><span>Conductores</span></div>
+              <h4>Cómo atiende hoy</h4>
+              <ul>
+                <li>Un único punto de entrada para todas las verticales: un <strong>árbol de decisión</strong> que clasifica las consultas y deriva casi todo a un agente.</li>
+                <li>Los conductores son <strong>usuarios compartidos</strong> entre todas las unidades de negocio.</li>
+                <li>Empresa data-driven: <strong>soporte es un indicador principal de sus OKRs</strong>.</li>
+              </ul>
+              <h4>Hallazgos clave</h4>
+              <ul>
+                <li>La lógica de asignación desbordaba a los agentes, que terminaban <strong>pasándose tickets entre ellos</strong>.</li>
+                <li>Los agentes <strong>no veían los mensajes salientes</strong> sin respuesta y los anotaban en una planilla para no perder contexto.</li>
+                <li>El segmento corporativo se atendía de manera informal por WhatsApp, con <strong>respuestas de más de 48 hs</strong>.</li>
+                <li>Las reservas y la logística se gestionaban <strong>de forma totalmente manual</strong>.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="co-card">
+            <header><span class="name">wepa</span><p>Red transaccional: pagos de servicios, corresponsalía no bancaria, remesas y terminales de autogestión, a través de miles de comercios.</p></header>
+            <div class="body">
+              <h4>A quién atiende</h4>
+              <div class="chips"><span>Comercios</span><span>Aliados TED</span><span>Facturadores</span><span>Cliente final</span></div>
+              <h4>Cómo atiende hoy</h4>
+              <ul>
+                <li>Su cliente principal es <strong>B2B</strong>: los comercios. El cliente final llega a través de ellos.</li>
+                <li>Gran parte del trabajo es <strong>comercial</strong>: captar y dar de alta comercios, aliados y facturadores.</li>
+                <li>Operaciones centraliza reclamos que llegan por <strong>muchas herramientas y canales</strong> a la vez.</li>
+              </ul>
+              <h4>Hallazgos clave</h4>
+              <ul>
+                <li>Los procesos comerciales <strong>no estaban estandarizados</strong> ni tenían trazabilidad: dar de alta un aliado podía llevar meses entre mails y papeles.</li>
+                <li>La información quedaba <strong>dispersa entre sistemas</strong> y dependía de muchas áreas.</li>
+                <li>El bot web no era conversacional: solo pedía nombre y mail y abría un ticket.</li>
+                <li>Muchos procesos de backoffice eran <strong>repetitivos y manuales</strong>.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+        <p>Mismo programa, problemas opuestos: <strong>muv necesitaba ordenar una atención masiva y centralizada</strong>, y <strong>wepa necesitaba dar estructura a relaciones B2B largas y dispersas</strong>. Por eso el CRM no podía configurarse igual en las dos.</p>
       </div>
-      <p class="prose" style="margin-top:28px;max-width:760px">Mismo programa, problemas opuestos: <strong>muv necesitaba ordenar una atención masiva y centralizada</strong>, mientras que <strong>wepa necesitaba dar estructura a relaciones B2B largas y dispersas</strong>. Por eso el CRM no podía configurarse igual en las dos.</p>
     </div>
   </section>
 
-  <!-- ============ DE HALLAZGOS A FUNCIONALIDADES ============ -->
-  <section class="case-section soft" id="funcionalidades">
-    <div class="wrap">
-      <h2>De hallazgos a funcionalidades</h2>
-      <hr class="rule">
-      <p class="prose" style="max-width:720px">El corazón de mi trabajo: <strong>traducir cada dolor en algo que la herramienta pudiera resolver</strong>, en el idioma de los equipos de producto. No alcanzaba con decir “encontramos esto”; teníamos que llegar con “encontramos esto y recomendamos hacer esto, por estas razones”.</p>
-
-      <div class="flow" role="table" aria-label="Hallazgos traducidos a funcionalidades">
-        <div class="flow-head" role="row"><div>Hallazgo</div><div></div><div>Funcionalidad</div><div>Herramienta</div></div>
-
-        <div class="flow-row" role="row">
-          <div class="insight"><small>muv · soporte</small>Los agentes se desbordan y se pasan tickets entre ellos.</div>
-          <div class="arrow">→</div>
-          <div class="feature">Asignación por disponibilidad del agente, reasignación automática al pasar a offline y toma de casos obligatoria.</div>
-          <div class="tool">CRM</div>
-        </div>
-        <div class="flow-row" role="row">
-          <div class="insight"><small>muv · soporte</small>El agente no tiene el contexto del usuario para resolver.</div>
-          <div class="arrow">→</div>
-          <div class="feature">Ficha 360 de conductor y pasajero: estado en la app, últimos viajes, deudas y documentos de onboarding.</div>
-          <div class="tool">CRM</div>
-        </div>
-        <div class="flow-row" role="row">
-          <div class="insight"><small>muv · soporte</small>Se pierden los mensajes salientes y se duplican tickets.</div>
-          <div class="arrow">→</div>
-          <div class="feature">Historial unificado por usuario y gestiones outbound desde la misma herramienta.</div>
-          <div class="tool">Canales</div>
-        </div>
-        <div class="flow-row" role="row">
-          <div class="insight"><small>muv · corporativo</small>Las cuentas de empresas no tienen seguimiento proactivo.</div>
-          <div class="arrow">→</div>
-          <div class="feature">Alerta de inactividad: si una empresa baja mucho su volumen de viajes, se crea una tarea para su ejecutivo de cuenta.</div>
-          <div class="tool">CRM</div>
-        </div>
-        <div class="flow-row" role="row">
-          <div class="insight"><small>muv · negocio</small>Soporte es un OKR, pero las métricas se arman a mano.</div>
-          <div class="arrow">→</div>
-          <div class="feature">Dashboards de CSAT, tiempos de primera respuesta y resolución, y volumen por tipificación, por equipo y por agente.</div>
-          <div class="tool">Dashboards</div>
-        </div>
-        <div class="flow-row" role="row">
-          <div class="insight"><small>wepa · comercial</small>Altas de comercios, aliados y facturadores sin estándar ni trazabilidad.</div>
-          <div class="arrow">→</div>
-          <div class="feature">Procesos comerciales estandarizados en el CRM, con etapas visibles para todos los equipos y para el cliente.</div>
-          <div class="tool">CRM</div>
-        </div>
-        <div class="flow-row" role="row">
-          <div class="insight"><small>wepa · operaciones</small>Los llamados llegan sin clasificar y sin derivación clara.</div>
-          <div class="arrow">→</div>
-          <div class="feature">Árbol de IVR con gestión y derivación de llamados según tipo de cliente y motivo.</div>
-          <div class="tool">IVR</div>
-        </div>
-        <div class="flow-row" role="row">
-          <div class="insight"><small>wepa · operaciones</small>El bot web solo abre tickets.</div>
-          <div class="arrow">→</div>
-          <div class="feature">Chatbot en la web y en el sistema wepa, integrado con el CRM, para resolver consultas frecuentes.</div>
-          <div class="tool">Bot</div>
+  <!-- 05 -->
+  <section class="chapter">
+    <div class="wrap chapter-grid">
+      <div class="chapter-label"><span class="num">05</span><h2>De hallazgos a funcionalidades</h2></div>
+      <div class="chapter-body">
+        <p>El corazón de mi trabajo: <strong>traducir cada dolor en algo que la herramienta pudiera resolver</strong>, en el idioma de los equipos de producto. No alcanzaba con “encontramos esto”; teníamos que llegar con “encontramos esto y recomendamos hacer esto, por estas razones”.</p>
+        <div class="flow">
+          <div class="flow-row"><div class="insight"><small>muv · soporte</small>Los agentes se desbordan y se pasan tickets entre ellos.</div><div class="to">→</div><div class="feature">Asignación por disponibilidad, reasignación automática al pasar a offline y toma de casos obligatoria.</div><div class="tool">CRM</div></div>
+          <div class="flow-row"><div class="insight"><small>muv · soporte</small>El agente no tiene el contexto del usuario para resolver.</div><div class="to">→</div><div class="feature">Ficha 360 de conductor y pasajero: estado en la app, últimos viajes, deudas y documentos.</div><div class="tool">CRM</div></div>
+          <div class="flow-row"><div class="insight"><small>muv · soporte</small>Se pierden los mensajes salientes y se duplican tickets.</div><div class="to">→</div><div class="feature">Historial unificado por usuario y gestiones outbound desde la misma herramienta.</div><div class="tool">Canales</div></div>
+          <div class="flow-row"><div class="insight"><small>muv · corporativo</small>Las cuentas de empresas no tienen seguimiento proactivo.</div><div class="to">→</div><div class="feature">Alerta de inactividad: si una empresa baja mucho su volumen de viajes, se crea una tarea para su ejecutivo de cuenta.</div><div class="tool">CRM</div></div>
+          <div class="flow-row"><div class="insight"><small>muv · negocio</small>Soporte es un OKR, pero las métricas se arman a mano.</div><div class="to">→</div><div class="feature">Dashboards de CSAT, tiempos de respuesta y resolución, y volumen por tipificación, equipo y agente.</div><div class="tool">Dashboards</div></div>
+          <div class="flow-row"><div class="insight"><small>wepa · comercial</small>Altas de comercios, aliados y facturadores sin estándar ni trazabilidad.</div><div class="to">→</div><div class="feature">Procesos comerciales estandarizados, con etapas visibles para todos los equipos y para el cliente.</div><div class="tool">CRM</div></div>
+          <div class="flow-row"><div class="insight"><small>wepa · operaciones</small>Los llamados llegan sin clasificar y sin derivación clara.</div><div class="to">→</div><div class="feature">Árbol de IVR con gestión y derivación según tipo de cliente y motivo.</div><div class="tool">IVR</div></div>
+          <div class="flow-row"><div class="insight"><small>wepa · operaciones</small>El bot web solo abre tickets.</div><div class="to">→</div><div class="feature">Chatbot en la web y en el sistema wepa, integrado al CRM, para resolver consultas frecuentes.</div><div class="tool">Bot</div></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ MVP ============ -->
-  <section class="case-section dark" id="mvp">
-    <div class="wrap">
-      <h2>Co-creando el MVP con producto</h2>
-      <hr class="rule">
-      <div class="prose" style="opacity:.9">
-        <p>Con el discovery presentado, trabajamos con los PMs de CRM, Canales, IVR y Bot en <strong>sesiones de ideación de un MVP integral</strong>. Después lo validamos con negocio, lo refinamos y lo presentamos para cerrar el alcance. Todo en unas tres semanas.</p>
+  <!-- 06 -->
+  <section class="chapter">
+    <div class="wrap chapter-grid">
+      <div class="chapter-label"><span class="num">06</span><h2>Co-creando el MVP con producto</h2></div>
+      <div class="chapter-body">
+        <p>Con el discovery presentado, trabajamos con los PMs de CRM, Canales, IVR y Bot en <strong>sesiones de ideación de un MVP integral</strong>. Después lo validamos con negocio, lo refinamos y lo presentamos para cerrar el alcance, en unas tres semanas.</p>
         <p>Para priorizar no partimos de opiniones: <strong>alineamos criterios</strong> y los cruzamos con cada equipo y proceso.</p>
-      </div>
-      <div class="criteria">
-        <div><b>Herramientas</b>Cuántas usa hoy cada equipo</div>
-        <div><b>Equipos involucrados</b>En cada proceso</div>
-        <div><b>Canales</b>Con clientes internos y externos</div>
-        <div><b>Volumen de contactos</b>De clientes internos y externos</div>
-        <div><b>Urgencia de resolución</b>En solicitudes, consultas y reclamos</div>
-        <div><b>Eficiencia operativa</b>En las tareas diarias</div>
-        <div><b>Experiencia</b>De clientes finales e internos</div>
-      </div>
-    </div>
-  </section>
-
-  <section class="case-section soft" style="padding-top:72px">
-    <div class="wrap">
-      <h3>MVP y evolutivos (ejemplo muv)</h3>
-      <div class="split">
-        <div>
-          <h4>Must-have · MVP</h4>
-          <ul>
-            <li>Dinámica de gestión de tickets que garantice equidad en la carga de trabajo y cumplimiento de SLAs.</li>
-            <li>Ficha 360 de conductor y pasajero.</li>
-            <li>Manuales de procesos y macros de respuesta dentro del CRM.</li>
-            <li>Réplica del árbol de navegación en los nuevos canales y gestiones outbound.</li>
-            <li>Métricas clave de atención por equipo y agente.</li>
-          </ul>
+        <div class="chips">
+          <span>Herramientas por equipo</span><span>Equipos involucrados</span><span>Canales internos y externos</span><span>Volumen de contactos</span><span>Urgencia de resolución</span><span>Eficiencia operativa</span><span>Experiencia de clientes</span>
         </div>
-        <div>
-          <h4>Nice-to-have · evolutivos</h4>
-          <ul>
-            <li>Estado del usuario en tiempo real dentro del perfil.</li>
-            <li>Alertas de inactividad de cuentas corporativas.</li>
-            <li>Automatizar las derivaciones a otros equipos que hoy se hacen por chat interno.</li>
-            <li>Flujos asistidos, soporte in-app y Help Center, alineados al roadmap de la empresa.</li>
-          </ul>
+        <div class="split">
+          <div>
+            <h4>Must-have · MVP (ejemplo muv)</h4>
+            <ul>
+              <li>Gestión de tickets que garantice equidad en la carga de trabajo y cumplimiento de SLAs.</li>
+              <li>Ficha 360 de conductor y pasajero.</li>
+              <li>Manuales de procesos y macros de respuesta dentro del CRM.</li>
+              <li>Réplica del árbol de navegación en los nuevos canales y gestiones outbound.</li>
+              <li>Métricas clave de atención por equipo y agente.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Nice-to-have · evolutivos</h4>
+            <ul>
+              <li>Estado del usuario en tiempo real dentro del perfil.</li>
+              <li>Alertas de inactividad de cuentas corporativas.</li>
+              <li>Automatizar las derivaciones que hoy se hacen por chat interno.</li>
+              <li>Flujos asistidos, soporte in-app y Help Center, alineados al roadmap.</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ IMPLEMENTACIÓN ============ -->
-  <section class="case-section" id="implementacion">
-    <div class="wrap">
-      <h2>Estar en la implementación</h2>
-      <hr class="rule">
-      <p class="prose" style="max-width:720px">Definir qué construir no era el final de mi trabajo. Cuando la implementación se encuentra con la realidad (sistemas que fallan, equipos que resisten el cambio, casos que nadie había contemplado), si no estás, la experiencia se recorta para priorizar la factibilidad. Por eso acompañé cada etapa:</p>
-      <div class="involve">
-        <div><span class="kicker">Antes del diseño</span><h4>¿Es el problema correcto?</h4><p>Validamos hallazgos con los equipos y con datos antes de proponer.</p></div>
-        <div><span class="kicker">Durante el diseño</span><h4>¿Resuelve lo que encontramos?</h4><p>Cuidamos que cada funcionalidad respondiera a un hallazgo del discovery.</p></div>
-        <div><span class="kicker">Antes de salir</span><h4>¿El servicio está listo?</h4><p>Test y training con los equipos de atención: procesos, personas y excepciones.</p></div>
-        <div><span class="kicker">En producción</span><h4>¿Funcionó?</h4><p>Hypercare y seguimiento para detectar ajustes y alimentar los evolutivos.</p></div>
+  <!-- 07 -->
+  <section class="chapter">
+    <div class="wrap chapter-grid">
+      <div class="chapter-label"><span class="num">07</span><h2>Estar en la implementación</h2></div>
+      <div class="chapter-body">
+        <p>Definir qué construir no era el final de mi trabajo. Cuando la implementación se encuentra con la realidad (sistemas que fallan, equipos que resisten el cambio, casos que nadie había contemplado), si no estás, la experiencia se recorta para priorizar la factibilidad. Por eso acompañé cada etapa:</p>
+        <div class="cards">
+          <div class="card card--paper"><span class="k">Antes del diseño</span><h4>¿Es el problema correcto?</h4><p>Validamos hallazgos con los equipos y con datos antes de proponer.</p></div>
+          <div class="card"><span class="k">Durante</span><h4>¿Resuelve lo que encontramos?</h4><p>Cada funcionalidad tenía que responder a un hallazgo del discovery.</p></div>
+          <div class="card"><span class="k">Antes de salir</span><h4>¿El servicio está listo?</h4><p>Test y training con los equipos de atención: procesos, personas y excepciones.</p></div>
+          <div class="card"><span class="k">En producción</span><h4>¿Funcionó?</h4><p>Hypercare y seguimiento para detectar ajustes y alimentar los evolutivos.</p></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ RESULTADOS ============ -->
-  <section class="case-section soft" id="resultados">
-    <div class="wrap">
-      <h2>Resultados</h2>
-      <hr class="rule">
-      <div class="todo">
-        <b>Pendiente · completar con datos</b>
-        Acá van los números del impacto. Por ejemplo: cuántas empresas llegaron a producción, en cuánto tiempo, cambios en CSAT o tiempos de respuesta, contención del bot, tickets que dejaron de gestionarse a mano, o si el método de discovery se volvió el estándar del programa.
+  <!-- 08 -->
+  <section class="chapter">
+    <div class="wrap chapter-grid">
+      <div class="chapter-label"><span class="num">08</span><h2>Resultados</h2></div>
+      <div class="chapter-body">
+        <div class="todo"><b>Pendiente · completar con datos</b>Acá van los números del impacto. Por ejemplo: cuántas empresas llegaron a producción, en cuánto tiempo, cambios en CSAT o tiempos de respuesta, contención del bot, tickets que dejaron de gestionarse a mano, o si el método de discovery se volvió el estándar del programa.</div>
       </div>
     </div>
   </section>
 
-  <!-- ============ APRENDIZAJES ============ -->
-  <section class="case-section pink" id="aprendizajes">
-    <div class="wrap">
-      <h2>Lo que me llevo</h2>
-      <hr class="rule rule--white">
-      <div class="learn">
-        <div><h4>El entregable es el medio</h4><p>Un discovery vale por las decisiones que habilita. Presentarlo era el principio, no el final.</p></div>
-        <div><h4>Escalar sin estandarizar de más</h4><p>Un mismo método para todas las empresas nos dio velocidad. Escuchar a cada una nos dio implementaciones que tenían sentido.</p></div>
-        <div><h4>Tomar posición</h4><p>Llegar a producto con una recomendación fundamentada, y no solo con opciones, hizo que las conversaciones fueran más cortas y más productivas.</p></div>
+  <!-- 09 -->
+  <section class="chapter">
+    <div class="wrap chapter-grid">
+      <div class="chapter-label"><span class="num">09</span><h2>Lo que me llevo</h2></div>
+      <div class="chapter-body">
+        <div class="learn">
+          <div><h4>El entregable es el medio</h4><p>Un discovery vale por las decisiones que habilita. Presentarlo era el principio, no el final.</p></div>
+          <div><h4>Escalar sin estandarizar de más</h4><p>Un mismo método para todas las empresas nos dio velocidad. Escuchar a cada una nos dio implementaciones con sentido.</p></div>
+          <div><h4>Tomar posición</h4><p>Llegar a producto con una recomendación fundamentada hizo que las conversaciones fueran más cortas y más productivas.</p></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section>
-    <div class="wrap next-case">
-      <a class="back" href="../index.html#proyectos">← Volver a proyectos</a>
-      <a class="btn" href="../index.html#proyecto-2">Siguiente: Discovery para transformación digital →</a>
+  <section class="section" style="padding-top:24px">
+    <div class="wrap">
+      <a class="next-card" href="discovery-banca-empresas.html">
+        <div><span class="eyebrow">Siguiente caso · Proyecto #2</span><h3>Discovery para programa de transformación digital</h3></div>
+        <span class="go" aria-hidden="true">→</span>
+      </a>
     </div>
   </section>
-
-  <footer>© 2026 Emilia Lodigiani</footer>
 </main>
 
-<script>
-  (function () {
-    var links = Array.prototype.slice.call(document.querySelectorAll('.side-nav a[href^="#"]'));
-    var map = {};
-    links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
-    if (!('IntersectionObserver' in window)) return;
-    var obs = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (!e.isIntersecting) return;
-        var id = e.target.id;
-        if (map[id]) { links.forEach(function (l) { l.classList.remove('is-active'); }); map[id].classList.add('is-active'); }
-      });
-    }, { rootMargin: '-45% 0px -50% 0px' });
-    document.querySelectorAll('main section').forEach(function (s) { obs.observe(s); });
-  })();
-</script>
+<footer class="footer">
+  <div class="wrap"><span>© 2026 Emilia Lodigiani</span><a href="../index.html#contacto">Contacto</a></div>
+</footer>
 </body>
 </html>
