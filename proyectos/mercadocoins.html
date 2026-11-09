@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>MercadoCoins · Emilia Lodigiani</title>
+  <meta name="description" content="Caso: definición del comportamiento de MercadoCoins en los flujos de postcompra de Mercado Libre.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <div class="nav-inner">
+      <a class="logo" href="../index.html">ema lodigiani<span>.</span></a>
+      <nav class="nav-links" aria-label="Secciones">
+        <a href="../index.html#sobre-mi" class="hide-sm">Sobre mí</a>
+        <a href="../index.html#proyectos">Proyectos</a>
+        <a href="../index.html#contacto" class="nav-cta">Contacto</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="case-hero">
+    <div class="wrap">
+      <a class="back" href="../index.html#proyectos">← Todos los proyectos</a>
+      <div class="tags"><span class="pill pill--magenta">Proyecto #4</span><span class="pill">Producto</span></div>
+      <h1>Definición de producto: MercadoCoins</h1>
+      <p class="lede">¿Qué pasa con una recompensa cuando la compra que la generó se cancela, se devuelve o termina en reclamo? Una decisión de producto con <strong>impacto en la experiencia y en el negocio</strong>.</p>
+      <div class="ficha">
+        <div><span>Rol</span><b>Product Commerce Analyst</b></div>
+        <div><span>Equipo</span><b>Postcompra · Mercado Libre</b></div>
+        <div><span>Período</span><b>2021 – 2022</b></div>
+        <div><span>Foco</span><b>Cancelaciones · Devoluciones · Reclamos</b></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <figure class="figure case-cover"><img src="../assets/img/mercadocoins/esquema.jpg" alt="Esquema de liberación de MercadoCoins y flujos de postcompra, con el share de órdenes en cada camino"></figure>
+    </div>
+  </section>
+
+  <!-- 01 -->
+  <section class="chapter">
+    <div class="wrap chapter-grid">
+      <div class="chapter-label"><span class="num">01</span><h2>El desafío</h2></div>
+      <div class="chapter-body">
+        <p>Las <strong>MercadoCoins (MȻ)</strong> son las criptomonedas de Mercado Libre, otorgadas como beneficio a los compradores en ciertas transacciones. Como parte del equipo de Postcompra, asumí el rol de Producto para <strong>definir su comportamiento en los flujos de cancelación, devolución y reclamo</strong>.</p>
+        <div class="quote-card">
+          <p class="big-quote">La idea inicial era recuperar las MȻ en casi todos los flujos. Pero, <em>¿qué hacemos cuando el usuario ya no las tiene?</em></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 -->
+  <section class="chapter">
+    <div class="wrap chapter-grid">
+      <div class="chapter-label"><span class="num">02</span><h2>El análisis</h2></div>
+      <div class="chapter-body">
+        <p>Analizamos la <strong>distribución de flujos, los tiempos, el NPS y los motivos</strong> de cada camino de postcompra para entender dónde estaba el riesgo real.</p>
+        <div class="cards">
+          <div class="card card--paper"><span class="n">93,7%</span><h4>Compras exitosas</h4><p>No requieren ninguna acción sobre las MȻ.</p></div>
+          <div class="card"><span class="n">5,3%</span><h4>Reembolsos o devoluciones</h4><p>Ocurren hasta 7 días después de la entrega.</p></div>
+          <div class="card"><span class="n">0,6%</span><h4>Después del día 7</h4><p>El 85% corresponde a compradores confiables.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 -->
+  <section class="chapter">
+    <div class="wrap chapter-grid">
+      <div class="chapter-label"><span class="num">03</span><h2>La primera propuesta</h2></div>
+      <div class="chapter-body">
+        <p class="big-quote">Liberar las MȻ <em>7 días después de la entrega.</em></p>
+        <p>Con esa regla evitábamos el problema en el <strong>99,3% de las órdenes</strong>, y la simulación de pérdidas mostraba que solo poníamos en riesgo el <strong>0,06% del GMV</strong>. En números, la propuesta cerraba.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 -->
+  <section class="chapter">
+    <div class="wrap chapter-grid">
+      <div class="chapter-label"><span class="num">04</span><h2>Cambiar de posición</h2></div>
+      <div class="chapter-body">
+        <p>Al discutirlo con otros equipos de producto, entendimos que <strong>no era la mejor experiencia para el usuario en cuanto al beneficio</strong>: una recompensa que llega una semana después pierde gran parte de su valor.</p>
+        <div class="quote-card" style="background:var(--paper);color:var(--navy)">
+          <p class="big-quote" style="color:var(--navy)">La solución final fue <em style="color:var(--magenta)">entregar las coins en el momento de la compra</em>, y diseñar otras acciones para mitigar riesgos en todos los flujos de postcompra.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 -->
+  <section class="chapter">
+    <div class="wrap chapter-grid">
+      <div class="chapter-label"><span class="num">05</span><h2>Resultados</h2></div>
+      <div class="chapter-body">
+        <div class="todo"><b>Para sumar</b>¿Qué acciones de mitigación se diseñaron y cómo funcionaron? Cualquier dato de recupero, reclamos o percepción del beneficio suma mucho a este caso.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 -->
+  <section class="chapter">
+    <div class="wrap chapter-grid">
+      <div class="chapter-label"><span class="num">06</span><h2>Lo que me llevo</h2></div>
+      <div class="chapter-body">
+        <div class="learn">
+          <div><h4>Los datos no deciden solos</h4><p>La regla de los 7 días era sólida en números, pero la experiencia del beneficio pesaba más.</p></div>
+          <div><h4>Cambiar de posición también es criterio</h4><p>Escuchar a otros equipos nos llevó a una solución mejor que la nuestra.</p></div>
+          <div><h4>Pensar en sistema</h4><p>El riesgo no se resolvía en un flujo: había que cuidar toda la postcompra.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:24px">
+    <div class="wrap">
+      <a class="next-card" href="crm-holding.html">
+        <div><span class="eyebrow">Volver al inicio · Proyecto #1</span><h3>Implementación de CRM y canales digitales en un holding</h3></div>
+        <span class="go" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap"><span>© 2026 Emilia Lodigiani</span><a href="../index.html#contacto">Contacto</a></div>
+</footer>
+</body>
+</html>
