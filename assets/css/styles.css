@@ -162,8 +162,8 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .principle:nth-child(2) { background: var(--paper); color: var(--navy); }
 .principle:nth-child(2) h3, .principle:nth-child(2) strong { color: var(--navy); }
 .principle:nth-child(3) { background: var(--surface-2); }
-.principle .n { font-family: var(--display); font-weight: 800; font-size: .8rem; letter-spacing: .14em; opacity: .75; }
-.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 16px; }
+.principle .n { font-family: var(--display); font-weight: 300; font-size: .8rem; letter-spacing: .14em; opacity: .75; }
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px; }
 .stat { border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 22px 24px; }
 .stat b { display: block; font-family: var(--display); font-weight: 800; font-size: clamp(1.8rem, 3.4vw, 2.6rem); letter-spacing: -.03em; line-height: 1; color: var(--pink); }
 .stat span { display: block; margin-top: 8px; color: var(--muted); font-size: .92rem; line-height: 1.4; }
@@ -172,7 +172,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
   .about-photo { max-width: 420px; }
   .principles { grid-template-columns: 1fr; }
   .principle { min-height: 0; }
-  .stats { grid-template-columns: 1fr 1fr; }
+  .stats { grid-template-columns: 1fr; }
 }
 
 /* ---------- trayectoria (gantt) ---------- */
