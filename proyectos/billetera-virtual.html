@@ -139,5 +139,15 @@
 <footer class="footer">
   <div class="wrap"><span>© 2026 Emilia Lodigiani</span><a href="../index.html#contacto">Contacto</a></div>
 </footer>
+<script>
+  // Cada caso abre siempre desde el inicio de la página.
+  (function () {
+    try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch (e) {}
+    function top() { if (!location.hash) { document.documentElement.style.scrollBehavior = 'auto'; window.scrollTo(0, 0); document.documentElement.style.scrollBehavior = ''; } }
+    top();
+    window.addEventListener('load', top);
+    window.addEventListener('pageshow', top);
+  })();
+</script>
 </body>
 </html>
