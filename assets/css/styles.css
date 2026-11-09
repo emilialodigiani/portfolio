@@ -431,3 +431,10 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .big-stat strong { display: block; font-family: var(--display); font-weight: 700; font-size: 1.1rem; line-height: 1.25; }
 .big-stat span { display: block; margin-top: 6px; font-size: .9rem; line-height: 1.45; color: var(--muted); }
 @media (max-width: 520px) { .stat-stack { grid-template-columns: 1fr; } .big-stat { row-gap: 8px; } }
+
+/* foto de "Sobre mí": en desktop toma la altura del texto, sin pasarse */
+@media (min-width: 961px) {
+  .about-grid { grid-template-columns: 1.6fr 1fr; align-items: stretch; }
+  .about-photo { position: relative; min-height: 320px; }
+  .about-photo img { position: absolute; inset: 0; height: 100%; aspect-ratio: auto; object-position: center 30%; }
+}
