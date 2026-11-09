@@ -149,7 +149,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 
 /* ---------- sobre mí ---------- */
 .about-grid { display: grid; grid-template-columns: 1.25fr 1fr; gap: clamp(32px, 6vw, 88px); align-items: start; }
-.about-statement { font-family: var(--display); font-weight: 700; font-size: clamp(1.8rem, 3.6vw, 3rem); line-height: 1.12; letter-spacing: -.03em; }
+.about-statement { font-family: var(--display); font-weight: 700; font-size: inherit; line-height: 1.55; letter-spacing: 0; max-width: 640px; }
 .about-statement .soft { color: var(--muted); }
 .about-photo { position: relative; }
 .about-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 35%; border-radius: var(--radius); }
