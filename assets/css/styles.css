@@ -71,6 +71,7 @@ strong { font-weight: 700; color: var(--ink); }
   padding: 6px 14px; border-radius: 999px; border: 1.5px solid var(--line); color: var(--ink);
 }
 .pill--magenta { background: var(--magenta); border-color: var(--magenta); color: var(--paper); }
+.hero-content > .pill, .chapter-body > .pill { justify-self: start; }
 .btn {
   display: inline-flex; align-items: center; gap: 10px;
   font-family: var(--display); font-weight: 700; font-size: .95rem;
