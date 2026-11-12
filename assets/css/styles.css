@@ -640,3 +640,6 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 
 /* chips destacados (muv, wepa): texto blanco sobre el naranja oscuro */
 .chips span.on { background: var(--magenta-strong); border-color: var(--magenta-strong); color: #FFFFFF; }
+
+/* título que agrupa las dos tarjetas de MVP y evolutivos */
+.split-title { font-size: 2.2rem; font-weight: 800; letter-spacing: -.04em; line-height: 1; margin-top: 12px; margin-bottom: -6px; }
