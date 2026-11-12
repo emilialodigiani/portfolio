@@ -197,11 +197,19 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .bar.now::after { content: ""; position: absolute; right: -5px; top: 50%; width: 10px; height: 10px; margin-top: -5px; border-radius: 50%; background: var(--magenta); box-shadow: 0 0 0 5px rgba(234, 51, 138, .3); }
 .career-legend { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 22px; font-size: .86rem; color: var(--muted); }
 .career-legend i { display: inline-block; width: 22px; height: 10px; border-radius: 999px; margin-right: 8px; vertical-align: 0; }
+/* celular: la trayectoria pasa a ser un timeline vertical */
 @media (max-width: 760px) {
-  .career-scale { display: none; }
-  .career-row { grid-template-columns: 1fr; gap: 8px; }
-  .track { height: 14px; }
-  .bar { top: 2px; height: 10px; }
+  .career { padding: 26px 20px 22px; }
+  .career-scale, .track { display: none; }
+  .career-row { display: block; position: relative; margin-left: 6px; padding: 0 0 26px 26px; border-top: 0; border-left: 2px solid var(--line); }
+  .career-row::before { content: ""; position: absolute; left: -8px; top: 2px; width: 14px; height: 14px; border-radius: 50%; background: #5a6da3; box-shadow: 0 0 0 4px var(--surface); }
+  .career-row.cat-sd::before { background: var(--magenta); }
+  .career-row.cat-ux::before { background: var(--pink); }
+  .career-row.cat-prod::before { background: var(--paper); }
+  .career-row:first-of-type::before { box-shadow: 0 0 0 4px var(--surface), 0 0 0 9px rgba(234, 51, 138, .3); }
+  .career-row .who { display: flex; flex-direction: column; gap: 2px; }
+  .career-row .who em { order: -1; font-family: var(--display); font-weight: 700; font-size: .78rem; color: var(--pink); }
+  .career-legend { margin-top: 4px; }
 }
 
 /* ---------- estudios y cursos ---------- */
@@ -260,8 +268,8 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .project-facts span { display: block; margin-top: 8px; font-size: .86rem; line-height: 1.4; color: var(--muted); }
 @media (max-width: 960px) {
   .project-card { grid-template-columns: 1fr; }
-  .project-side { order: -1; }
 }
+
 @media (max-width: 520px) {
   .project-facts { grid-template-columns: 1fr; }
   .project-facts div { border-left: 0; border-top: 1px solid var(--line); padding: 16px 22px; }
@@ -438,4 +446,45 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
   .about-grid { grid-template-columns: 1.6fr 1fr; align-items: stretch; }
   .about-photo { position: relative; min-height: 320px; }
   .about-photo img { position: absolute; inset: 0; height: 100%; aspect-ratio: auto; object-position: center 22%; }
+}
+
+/* "Ver más": oculta lo anterior a 2023 hasta que se pida */
+.collapsible:not(.show-all) .is-old { display: none; }
+.more-btn {
+  margin-top: 20px; cursor: pointer;
+  font-family: var(--display); font-weight: 700; font-size: .9rem;
+  padding: 11px 22px; border-radius: 999px; border: 0;
+  background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--line);
+  transition: background .2s, color .2s;
+}
+.more-btn:hover { background: var(--ink); color: var(--navy); }
+
+/* página Sobre mí */
+.about-page { padding-top: clamp(40px, 6vw, 80px); }
+
+/* presentación breve en el home */
+.intro { display: grid; grid-template-columns: 200px 1fr; gap: clamp(24px, 4vw, 48px); align-items: center; border-radius: var(--radius); background: var(--surface); padding: clamp(22px, 3.5vw, 40px); }
+.intro img { width: 200px; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 25%; border-radius: var(--radius-sm); }
+.intro-body { display: grid; gap: 16px; justify-items: start; max-width: 640px; color: #dbe2f3; }
+.intro-section { padding-bottom: 20px; }
+
+/* celular: la foto acompaña al texto */
+@media (max-width: 960px) {
+  .about-photo { max-width: none; order: -1; }
+  .about-photo img { width: 150px; aspect-ratio: 4 / 5; }
+}
+@media (max-width: 600px) {
+  .intro { grid-template-columns: 96px 1fr; align-items: start; gap: 18px; }
+  .intro img { width: 96px; }
+}
+
+/* celular: las tarjetas de proyecto muestran solo el texto */
+@media (max-width: 760px) {
+  .project-side, .project-side--stats { display: none; }
+}
+/* celular: el logo se acorta para que entre el menú */
+@media (max-width: 480px) {
+  .logo .logo-rest { display: none; }
+  .nav-inner { padding-left: 14px; }
+  .nav-links a { padding: 8px 9px; }
 }
