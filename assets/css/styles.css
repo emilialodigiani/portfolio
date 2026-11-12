@@ -69,9 +69,9 @@ strong { font-weight: 700; color: var(--ink); }
 .pill {
   display: inline-flex; align-items: center; gap: 8px;
   font-family: var(--display); font-weight: 700; font-size: .78rem; letter-spacing: .06em; text-transform: uppercase;
-  padding: 6px 14px; border-radius: 999px; border: 1.5px solid var(--line); color: var(--ink);
+  padding: 5px 10px; border-radius: 6px; border: 1px solid var(--line); color: var(--ink);
 }
-.pill--magenta { background: var(--magenta); border-color: var(--magenta); color: var(--paper); }
+.pill--magenta { background: rgba(234, 51, 138, .16); border-color: rgba(234, 51, 138, .6); color: var(--pink); }
 .hero-content > .pill, .chapter-body > .pill { justify-self: start; }
 .btn {
   display: inline-flex; align-items: center; gap: 10px;
