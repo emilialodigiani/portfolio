@@ -623,3 +623,9 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 /* datos de los proyectos: números alineados a la derecha, pegados a su texto */
 .big-stat { column-gap: 20px; }
 .big-stat > b { justify-self: end; text-align: right; }
+
+/* carátula de Proyectos: el texto arranca a la misma altura que el nombre de la portada */
+.cover-card--bleed > .wrap { width: 100%; }
+@media (max-width: 760px) {
+  .hero-content { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+}
