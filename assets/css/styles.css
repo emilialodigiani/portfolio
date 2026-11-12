@@ -637,3 +637,6 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 @media (max-width: 960px) {
   .project-side--stats { padding: 0 clamp(24px, 3vw, 44px) clamp(24px, 3vw, 44px); }
 }
+
+/* chips destacados (muv, wepa): texto blanco sobre el naranja oscuro */
+.chips span.on { background: var(--magenta-strong); border-color: var(--magenta-strong); color: #FFFFFF; }
