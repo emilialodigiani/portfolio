@@ -491,3 +491,25 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 
 /* "Cómo trabajo" en el home: va pegado a la tarjeta de presentación */
 .intro + .principles { margin-top: 16px; }
+
+/* portada a pantalla completa: la foto va de borde a borde y por detrás del menú */
+.hero { padding-top: 0; margin-top: -88px; }
+.hero > .wrap { max-width: none; padding: 0; }
+.hero-card { border-radius: 0; min-height: 100vh; min-height: 100svh; }
+.hero-card::before {
+  background:
+    linear-gradient(180deg, rgba(6,20,54,.65) 0%, rgba(6,20,54,0) 180px),
+    linear-gradient(90deg, rgba(6,20,54,.92) 0%, rgba(6,20,54,.72) 42%, rgba(6,20,54,.05) 80%),
+    linear-gradient(0deg, rgba(6,20,54,.85) 0%, rgba(6,20,54,0) 45%);
+}
+.hero-content {
+  max-width: none; width: 100%;
+  padding: 140px max(40px, calc((100vw - var(--maxw)) / 2 + 40px)) clamp(56px, 10vh, 112px);
+}
+.hero-content > * { max-width: 900px; }
+.hero .lede { max-width: 620px; }
+@media (max-width: 760px) {
+  .hero { margin-top: -84px; }
+  .hero-content { padding: 120px max(20px, env(safe-area-inset-right, 0px)) 56px max(20px, env(safe-area-inset-left, 0px)); }
+}
+.logo .logo-rest { color: inherit; }
