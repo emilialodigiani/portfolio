@@ -619,3 +619,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .contact-card h2, .contact-card .contact-item a, .contact-card .contact-item b { color: #FFFFFF; }
 .contact-card .eyebrow { color: #FFFFFF !important; }
 .contact-item { border-top-color: rgba(255, 255, 255, .4); }
+
+/* datos de los proyectos: números alineados a la derecha, pegados a su texto */
+.big-stat { column-gap: 20px; }
+.big-stat > b { justify-self: end; text-align: right; }
