@@ -534,7 +534,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .btn--ghost:hover { background: var(--ink); color: var(--on-dark); }
 .more-btn:hover { background: var(--ink); color: var(--on-dark); }
 
-.pill--magenta { background: rgba(122, 46, 82, .07); border-color: var(--plum); color: var(--plum); }
+.pill--magenta { background: var(--marigold); border-color: var(--marigold); color: var(--ink); }
 
 /* portada clara: la foto se funde con el fondo cálido a la izquierda */
 .hero-card::before {
