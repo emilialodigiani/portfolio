@@ -629,3 +629,11 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 @media (max-width: 760px) {
   .hero-content { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
 }
+
+/* datos de los proyectos en píldoras, sobre el mismo fondo de la tarjeta */
+.project-side--stats { background: transparent; padding: clamp(24px, 3vw, 44px) clamp(24px, 3vw, 44px) clamp(24px, 3vw, 44px) 0; align-items: center; }
+.stat-stack { row-gap: 12px; align-content: center; }
+.big-stat, .big-stat:first-child { background: var(--bg); border: 0; border-radius: 999px; padding: 18px 32px; }
+@media (max-width: 960px) {
+  .project-side--stats { padding: 0 clamp(24px, 3vw, 44px) clamp(24px, 3vw, 44px); }
+}
