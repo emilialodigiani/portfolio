@@ -488,3 +488,6 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
   .nav-inner { padding-left: 14px; }
   .nav-links a { padding: 8px 9px; }
 }
+
+/* "Cómo trabajo" en el home: va pegado a la tarjeta de presentación */
+.intro + .principles { margin-top: 16px; }
