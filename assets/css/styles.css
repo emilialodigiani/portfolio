@@ -643,3 +643,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 
 /* título que agrupa las dos tarjetas de MVP y evolutivos */
 .split-title { font-size: 2.2rem; font-weight: 800; letter-spacing: -.04em; line-height: 1; margin-top: 12px; margin-bottom: -6px; }
+
+/* "Lo que me llevo": las tres tarjetas iguales, en blanco */
+.learn div, .learn div:nth-child(2), .learn div:nth-child(3) { background: var(--paper); color: var(--ink); }
+.learn h4, .learn div:nth-child(2) h4 { color: var(--ink); }
