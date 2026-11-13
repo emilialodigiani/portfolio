@@ -647,3 +647,6 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 /* "Lo que me llevo": las tres tarjetas iguales, en blanco */
 .learn div, .learn div:nth-child(2), .learn div:nth-child(3) { background: var(--paper); color: var(--ink); }
 .learn h4, .learn div:nth-child(2) h4 { color: var(--ink); }
+
+/* trayectoria: empresas en bold */
+.career-row .who span strong { font-weight: 700; color: var(--ink); }
