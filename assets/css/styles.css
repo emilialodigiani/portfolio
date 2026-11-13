@@ -450,7 +450,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 @media (min-width: 961px) {
   .about-grid { grid-template-columns: 1.6fr 1fr; align-items: stretch; }
   .about-photo { position: relative; min-height: 320px; }
-  .about-photo img { position: absolute; inset: 0; height: 100%; aspect-ratio: auto; object-position: center 22%; }
+  .about-photo img { position: absolute; inset: 0; height: 100%; aspect-ratio: auto; object-position: center 8%; }
 }
 
 /* "Ver más": oculta lo anterior a 2023 hasta que se pida */
